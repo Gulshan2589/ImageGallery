@@ -1,0 +1,256 @@
+@import url('https://fonts.googleapis.com/css2?family=Pattaya&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+.navbar-light {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  padding: 1rem;
+  border-bottom: 1px solid rgb(150, 148, 148);
+}
+
+.dark-mode {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #272626;
+  padding: 1rem;
+}
+
+
+.navbar-list {
+  display: flex;
+  list-style: none;
+}
+
+.navbar-item {
+  margin-right: 1.5rem;
+}
+
+.navbar-itemdark {
+  margin-right: 1.5rem;
+}
+
+.navbar-item a {
+  position: relative;
+  color: #333333;
+  font-size: 15px;
+  font-family: Montserrat;
+  font-weight: 600;
+  word-wrap: break-word;
+  text-decoration: none;
+  overflow: hidden;
+  transition: color 0.3s;
+}
+
+.navbar-item a:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #333333;
+  transform: scaleX(0);
+  transition: transform 0.3s;
+}
+
+.navbar-item a:hover:after {
+  transform: scaleX(1);
+}
+
+.navbar-itemdark a {
+  position: relative;
+  color: white;
+  font-size: 15px;
+  font-family: Montserrat;
+  font-weight: 600;
+  word-wrap: break-word;
+  text-decoration: none;
+  overflow: hidden;
+  transition: color 0.3s;
+}
+
+.navbar-itemdark a:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: white;
+  transform: scaleX(0);
+  transition: transform 0.3s;
+}
+
+.navbar-itemdark a:hover:after {
+  transform: scaleX(1);
+}
+
+
+.logo {
+  color: #333333;
+  font-size: 30px;
+  font-family: Pattaya;
+  font-weight: 400;
+  word-wrap: break-word
+}
+
+.logodark {
+  color: white;
+  font-size: 30px;
+  font-family: Pattaya;
+  font-weight: 400;
+  word-wrap: break-word
+}
+
+
+.switchdiv {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-right: 10px;
+}
+
+.switchstate {
+  color: #333333;
+  font-size: 15px;
+  font-family: Montserrat;
+  font-weight: 600;
+  word-wrap: break-word;
+  text-decoration: none;
+}
+
+.switchstatedark {
+  color: white;
+  font-size: 15px;
+  font-family: Montserrat;
+  font-weight: 600;
+  word-wrap: break-word;
+  text-decoration: none;
+}
+
+.searchbar {
+  left: 50%;
+  width: 300px;
+  transform: translate(-10%);
+  height: 30px;
+  padding: 3px 5px;
+  background: #e2dfdf;
+  box-shadow: 0px 4px 19px rgba(0, 0, 0, 0.05) inset;
+  border-radius: 6px;
+  border: 1px #ECECEC solid;
+}
+
+.smallscreen {
+  display: none;
+}
+
+.overlaynavbarl {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgb(246, 243, 241);
+  transition: .5s ease;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  z-index: 5;
+}
+
+.overlaynavbard {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: #272626;
+  transition: .5s ease;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  z-index: 5;
+}
+
+.overlay__closel {
+  font-size: 27px;
+  color: black;
+  cursor: pointer;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.overlay__closed{
+  font-size: 27px;
+  color: white;
+  cursor: pointer;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.navbarlistsmall{
+  list-style: none;
+  padding: 10px 0;
+}
+
+.navbar-itemsml  {
+  padding: 10px 0;
+}
+
+.navbar-itemdarksml  {
+  padding: 10px 0;
+}
+
+.navbar-itemsml a{
+  color: black;
+  font-size: 14px;
+  font-family: Montserrat;
+  font-weight: 600;
+  word-wrap: break-word;
+  text-decoration: none;
+  
+}
+
+.navbar-itemdarksml a {
+  color: white;
+  font-size: 14px;
+  font-family: Montserrat;
+  font-weight: 600;
+  word-wrap: break-word;
+  text-decoration: none;
+}
+
+@media (max-width: 768px) {
+  .navbar-list {
+    display: none;
+  }
+
+  .searchbar{
+    display: none;
+  }
+
+  .logo{
+    font-size: 25px;
+  }
+
+  .logodark {
+    font-size: 25px;
+  }
+
+  .smallscreen {
+    display: flex;
+  }
+
+  .switchdiv{
+    margin-left: 20px;
+  }
+
+  .menu {
+    font-size: 25px;
+  }
+}
