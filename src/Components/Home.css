@@ -106,7 +106,7 @@
 
 @media (max-width: 768px) {
   .overlay-text {
-    top: 40%;
+    top: 30%;
     left: 50%;
     color: white;
     font-size: 10px;
